@@ -1,29 +1,33 @@
-# case-analytics-engineer
+# Case: Analytics Engineer
+We have been hired by a company to set up their modern data stack. In the first phase, they would like to be able to report on their sales operations.
+They're selling various products to customers globally. In this repository, you will find CSV files covering information about customers, employees, orders, products and suppliers. Please use this data
+to prepare the following tasks.
 
-Context
-We've been hired by an E-Commerce company to set up their modern data stack. In the first phase, they would like to be able to report on their sales. Data from their eCommerce platform has been loaded to Google BigQuery. Using the open source dbt framework, and following their documented best practices, create a project and necessary models to transform the data into the following star schema:
- 
-A transactional fact table for “sales”, with the grain set at the order item level, with the following additional dimension:
-·          
-NEW or REPEAT purchase (based on the customer_unique_id)
-days between the purchase date and the delivered to customer date
-A dimension table for “customers”, with the grain set at the customer_unique_id, which should include the following dimensionalized facts and additional dimensions:
-·          
-number of orders
-total orders value
-date of first order
-date of most recent order
-value of most expensive order
-A dimension table for “products”, which should include the following dimensionalized facts and additional dimensions:
-·          
-total units sold
-total revenue
-whether it’s one of the top 10 products (by total units sold)
-product volume in cubic centimeters
-An incremental periodic snapshot fact table for “daily_products_sold” with the number of products sold, with the grain set per day, per product. There should be a row for each product/day even if there are no sales on that day.
- 
-Technical Details & Requirements
-The dbt project should be built using dbt 1.0 or later.
-The raw data is located inside the raw dataset
-The output of your dbt project will be in a dataset named dbt_sandbox2
-Share a zip file of the project as a deliverable
+### Tasks
+
+1. Please load the CSV files into a relational database of your choice, e.g, BigQuery, Postgres. You can choose whether to import the data into your database via a data import wizard (e.g. provided as part of the SQL IDE Dbeaver) or by writing a Python script.
+
+
+2. Using dbt Lab's documented best practices ([here](https://docs.getdbt.com/docs/guides/best-practices) and [here](https://docs.getdbt.com/docs/guides/best-practices)) and, optionally, also the dbt open source framework, create a project and necessary transformations to create the following models:
+
+   1. A transactional fact table for sales, with the grain set at the product level, with the following additional dimension:
+      1. new or returning customer 
+      2. number of days between first purchase and last purchase
+      
+   2. A dimension table for “customers”, with the grain set at the customer_id, which should include the following dimensionalized facts and additional dimensions:
+      3. number of orders 
+      4. total orders value 
+      5. date of first order 
+      6. date of most recent order 
+      7. value of most expensive order
+      8. whether it’s one of the top 10 products (by total units sold)
+      
+   3. A dimension table for “employee_region”, which should include the following dimensionalized facts and additional dimensions:
+      1. total orders sold
+      2. total products sold
+      3. total revenue
+      4. top performing territory (by revenue generated)
+      
+
+2. Archive the results of your work and send it to the person who provided you the case via email. 
+   NOTE: The archive file should contain either full dbt project or SQL queries organised in folders
