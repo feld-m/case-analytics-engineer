@@ -15,12 +15,12 @@ to prepare the following tasks.
       2. number of days between first purchase and last purchase
       
    2. A dimension table for “customers”, with the grain set at the customer_id, which should include the following dimensionalized facts and additional dimensions:
-      3. number of orders 
-      4. total orders value 
-      5. date of first order 
-      6. date of most recent order 
-      7. value of most expensive order
-      8. whether it’s one of the top 10 products (by total units sold)
+      1. number of orders 
+      2. total orders value 
+      3. date of first order 
+      4. date of most recent order 
+      5. value of most expensive order 
+      6. whether it’s one of the top 10 products (by total units sold)
       
    3. A dimension table for “employee_region”, which should include the following dimensionalized facts and additional dimensions:
       1. total orders sold
