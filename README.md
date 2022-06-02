@@ -27,7 +27,11 @@ to prepare the following tasks.
       2. total products sold
       3. total revenue
       4. top performing territory (by revenue generated)
-      
+
+   4. A dimension table for "top_suppliers", which should include the following dimensionalized facts and additional dimensions
+      1. top 10 companyName(supplier) in terms of most products sold
+      2. product quantity
+      3. number of customers served by each company(supplier)
 
 2. Archive the results of your work and send it to the person who provided you the case via email. 
    NOTE: The archive file should contain either full dbt project or SQL queries organised in folders
