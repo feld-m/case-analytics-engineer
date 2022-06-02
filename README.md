@@ -28,7 +28,7 @@ to prepare the following tasks.
       3. total revenue
       4. top performing territory (by revenue generated)
 
-   4. A dimension table for "top_suppliers", which should include the following dimensionalized facts and additional dimensions
+   4. A dimension table for "top_suppliers", which should include the following dimensionalized facts and additional dimensions:
       1. top 10 companyName(supplier) in terms of most products sold
       2. product quantity
       3. number of customers served by each company(supplier)
