@@ -15,18 +15,16 @@ to prepare the following tasks.
       2. number of days between first purchase and last purchase
       
    2. A dimension table for “customers”, with the grain set at the customer_id, which should include the following dimensionalized facts and additional dimensions:
-      1. number of orders 
-      2. total orders value 
-      3. date of first order
-      4. value of most expensive order 
-      5. whether it’s one of the top 10 customers (by revenue generated)
+      1. number of orders
+      2. value of most expensive order 
+      3. whether it’s one of the top 10 customers (by revenue generated)
       
    3. A dimension table for “employee_region”, which should include the following dimensionalized facts and additional dimensions:
       1. total orders sold
       2. total revenue
       3. top performing territory (by revenue generated)
 
-   4. A dimension table for monthly cohorts with grain set at country level and with the following additional facts:
+   4. A dimension table for monthly cohorts with grain set at country level and with the following additional facts. Please, make sure that every cohort will be available programmatically even when the business didn't acquire a new customer that month (for the full timerange of order date)
       1. Number of customers in the monthly cohort (customers are assigned in cohorts based on date of their first purchase)
       2. Cohort's total order value
 
