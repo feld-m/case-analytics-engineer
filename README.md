@@ -27,7 +27,7 @@ They're selling various products to customers globally. In this repository, you 
 
 3. Push your project to a repository that we can access (ideally a public repo). You can create a new repository or fork from this one, but _do not_ push your code to this repository.
 
-   If you choose to use the SQLite database, you can also include the database file in the repository.
+   If you choose to use the SQLite database, you can also include the updated database file with your models in the repository.
 
 4. Send the link to the repository to the person who provided you this case. 
 
