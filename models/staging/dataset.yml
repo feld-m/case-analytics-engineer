@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: main
+    schema: main
+    tables:
+      - name: orders
+      - name: categories
+      - name: customers
+      - name: employees
+      - name: order_details
+      - name: products
+      - name: shippers
